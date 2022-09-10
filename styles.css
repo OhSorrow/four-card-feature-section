@@ -1,0 +1,139 @@
+/* IMPORTING FONT FROM GOOGLE FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* DECLARE COLORS */
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* CSS BASIC RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+
+body {
+  padding: 6rem 0;
+  background-color: var(--very-light-gray);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 0.85fr;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+h1 {
+  color: var(--very-dark-blue);
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.bold-title {
+  display: block;
+  font-weight: 600;
+}
+
+.head {
+  text-align: center;
+  max-width: 500px;
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+h2 {
+  color: var(--very-dark-blue);
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+article {
+  background-color: white;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  padding: 2rem;
+  box-shadow: 0 8px 40px -20px rgba(105, 141, 158, 0.712);
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+article img {
+  margin-top: 2rem;
+  margin-left: auto;
+}
+
+.cards-container {
+  margin-top: 3rem;
+}
+
+.supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.team-builder {
+  border-top: 4px solid var(--red);
+}
+.karma {
+  border-top: 4px solid var(--orange);
+}
+.calculator {
+  border-top: 4px solid var(--blue);
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 5% 0;
+  }
+
+  article {
+    margin: 0;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .karma {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .supervisor,
+  .calculator {
+    grid-row: span 2;
+  }
+}
